@@ -1,13 +1,13 @@
-package dev.evalopez.apisupport;
+package dev.evalopez.appsupport;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApisupportApplication {
+public class AppsupportApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApisupportApplication.class, args);
+		SpringApplication.run(AppsupportApplication.class, args);
 	}
 
 }
