@@ -18,7 +18,7 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ticket")
-    private Long id;
+    private Long idTicket;
 
     @Column(name = "status_ticket")
     private String statusTicket;
@@ -30,12 +30,22 @@ public class Ticket {
     @CreatedDate
     private Date dateTicket;
 
-    public Long getId() {
-        return id;
+    public Ticket() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Ticket(Long idTicket, String statusTicket, String typeTicket, Date dateTicket) {
+        this.idTicket = idTicket;
+        this.statusTicket = statusTicket;
+        this.typeTicket = typeTicket;
+        this.dateTicket = dateTicket;
+    }
+
+    public Long getIdTicket() {
+        return idTicket;
+    }
+
+    public void setIdTicket(Long idTicket) {
+        this.idTicket = idTicket;
     }
 
     public String getStatusTicket() {
@@ -61,16 +71,5 @@ public class Ticket {
     public void setDateTicket(Date dateTicket) {
         this.dateTicket = dateTicket;
     }
-
-    public Ticket() {
-    }
-
-    public Ticket(Long id, String statusTicket, String typeTicket, Date dateTicket) {
-        this.id = id;
-        this.statusTicket = statusTicket;
-        this.typeTicket = typeTicket;
-        this.dateTicket = dateTicket;
-    }
-
 
 }
