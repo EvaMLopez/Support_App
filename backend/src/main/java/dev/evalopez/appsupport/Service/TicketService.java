@@ -34,10 +34,10 @@ public class TicketService implements GenericService<Ticket> {
     }
 
     @Override
-    public void delete(Ticket entity) {  
+    public void delete(Ticket entity) {
         ticketRepository.delete(entity);
     }
-
+    
     @Override
     public Ticket findById(Long id) {
         return ticketRepository.findById(id).orElse(null);        
