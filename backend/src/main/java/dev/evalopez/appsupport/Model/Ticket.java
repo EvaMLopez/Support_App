@@ -10,6 +10,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 
 @Entity(name = "Ticket")
@@ -29,6 +31,10 @@ public class Ticket {
     @Column(name = "date_ticket")
     @CreatedDate
     private Date dateTicket;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Ticket() {
     }

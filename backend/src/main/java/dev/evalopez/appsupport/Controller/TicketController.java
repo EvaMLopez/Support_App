@@ -18,7 +18,8 @@ import dev.evalopez.appsupport.Model.Ticket;
 import dev.evalopez.appsupport.Service.TicketService;
 
 @RestController
-@RequestMapping("/api/tickets")
+// @RequestMapping("/api/tickets")
+@RequestMapping("${api-endpoint}/tickets") 
 public class TicketController {
 
     private final TicketService ticketService;
@@ -34,16 +35,16 @@ public class TicketController {
     }
 
     @PostMapping
-    public Ticket save(Ticket entity) {
+    public Ticket save(@RequestBody Ticket entity) {
         return ticketService.save(entity);
     }
 
-    @PostMapping("editTicket/{id}")
+    @PostMapping("/editTicket/{id}")
     public Ticket update(@PathVariable Long id, @RequestBody Ticket entity) {
         return ticketService.save(entity);
     }
 
-    @DeleteMapping("deleteTicket/{id}")
+    @DeleteMapping("/deleteTicket/{id}")
     public void delete(@PathVariable Long id) {  
         ticketService.delete(ticketService.findById(id));
     }

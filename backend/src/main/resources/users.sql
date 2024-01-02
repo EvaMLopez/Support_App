@@ -1,4 +1,4 @@
-INSERT INTO user (name, password, type) VALUES
+INSERT INTO users (name, password, type) VALUES
 ("Giaco", "giaco123", true),
 ("María", "maria123", true),
 ("Cris", "cris123", true),
