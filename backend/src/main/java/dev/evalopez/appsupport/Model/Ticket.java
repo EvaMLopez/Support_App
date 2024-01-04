@@ -14,7 +14,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 
-@Entity(name = "Ticket")
+@Entity(name = "Tickets")
 public class Ticket {    
   
     @Id
@@ -25,12 +25,12 @@ public class Ticket {
     @Column(name = "status_ticket")
     private String statusTicket;
 
-    @Column(name = "type_ticket")
-    private String typeTicket;
-
     @Column(name = "date_ticket")
     @CreatedDate
     private Date dateTicket;
+
+    @Column(name = "type_ticket")
+    private String typeTicket;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

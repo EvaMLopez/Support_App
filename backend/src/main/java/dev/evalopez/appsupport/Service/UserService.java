@@ -27,7 +27,7 @@ public class UserService implements GenericService<User> {
     public User save(User entity) {
         return userRepository.save(entity);
     }
-
+    
     @Override
     public User update(User entity) {
         return userRepository.save(entity);
@@ -41,7 +41,5 @@ public class UserService implements GenericService<User> {
     @Override
     public User findById(Long id) {
         return userRepository.findById(id).orElse(null);        
-    }
-
-    
+    }    
 }

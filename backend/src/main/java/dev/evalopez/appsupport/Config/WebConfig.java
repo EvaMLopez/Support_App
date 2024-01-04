@@ -19,7 +19,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping(appConfig.getApiEndpoint() + "/**") 
             .allowCredentials(false)
-            .allowedOrigins("http://localhost:8080") // O "*" ¿? O "Reemplazar por la URL de Frontend
+            .allowedOrigins("http://localhost:8080") // "Reemplazar por la URL de Frontend
             .allowedMethods("GET", "POST", "PUT", "DELETE");
     }
 }

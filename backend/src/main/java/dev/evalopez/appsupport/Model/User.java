@@ -28,7 +28,7 @@ public class User {
     private String password;
     
     @Column 
-    private Boolean type;
+    private String type;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
@@ -37,7 +37,7 @@ public class User {
     public User() {
     }
 
-    public User(Long idUser, String name, String password, Boolean type, List<Ticket> tickets) {
+    public User(Long idUser, String name, String password, String type, List<Ticket> tickets) {
         this.idUser = idUser;
         this.name = name;
         this.password = password;
@@ -69,11 +69,11 @@ public class User {
         this.password = password;
     }
 
-    public Boolean getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Boolean type) {
+    public void setType(String type) {
         this.type = type;
     }
 

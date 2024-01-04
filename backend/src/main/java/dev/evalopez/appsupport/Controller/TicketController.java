@@ -1,6 +1,8 @@
 package dev.evalopez.appsupport.Controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,14 +13,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.evalopez.appsupport.Model.Ticket;
 import dev.evalopez.appsupport.Service.TicketService;
 
 @RestController
-// @RequestMapping("/api/tickets")
 @RequestMapping("${api-endpoint}/tickets") 
 public class TicketController {
 
@@ -44,20 +44,22 @@ public class TicketController {
         return ticketService.save(entity);
     }
 
-    @DeleteMapping("/deleteTicket/{id}")
+    @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable Long id) {  
         ticketService.delete(ticketService.findById(id));
-    }
+    }    
 
-    @GetMapping("/findById")
-    public ResponseEntity<Ticket> findById(@RequestParam Long id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findById(@PathVariable Long id) {
     Ticket ticket = ticketService.findById(id);    
     if (ticket != null) {
         return new ResponseEntity<>(ticket, HttpStatus.OK);
     } else {
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Ticket no encontrado");
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
-    }    
+    }
 }
 
 
