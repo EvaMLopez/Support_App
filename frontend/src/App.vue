@@ -12,7 +12,6 @@ import FooterComponent from './components/FooterComponent.vue';
 
 <style scoped lang="scss">
 
-
 @media (min-width: 1024px) {
 
 }
