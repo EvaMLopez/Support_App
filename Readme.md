@@ -21,7 +21,25 @@ npm run dev
 ```
 npm run build
 ```
+
+### install PrimeVue
+
+```
+npm install primevue --save
+```
+
+```
+npm install primeicons --save
+```
+
+```
+npm install primeflex --save
+```
+
+### install Axios
+```
+npm install axios
+```
+
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
+See [Configuration Reference](https://cli.vuejs.org/config/)
