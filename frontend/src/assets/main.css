@@ -1,6 +1,24 @@
-@import './base.css';
 
-#app {
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url('./img/background_ticket.jpg');
+  background-size:cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+/* body {
+  background: url('./img/background_ticket.jpg') center/cover fixed;
+}
+ */
+
+/* @import './base.css'; 
+  #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -22,7 +40,7 @@ a,
 }
 
 @media (min-width: 1024px) {
-  body {
+body {
     display: flex;
     place-items: center;
   }
@@ -31,5 +49,6 @@ a,
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
-  }
+  } 
 }
+ */

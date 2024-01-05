@@ -10,9 +10,11 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "axios": "^1.6.4",
     "install": "^0.13.0",
     "npm": "^10.2.5",
     "pinia": "^2.1.7",
+    "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
     "primevue": "^3.45.0",
     "vue": "^3.3.11",
@@ -22,6 +24,7 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "@vue/test-utils": "^2.4.3",
     "jsdom": "^23.0.1",
+    "sass": "^1.69.7",
     "vite": "^5.0.10",
     "vitest": "^1.0.4"
   }
