@@ -7,29 +7,16 @@ const username = ref('');
 const password = ref('');
 
 const login = () => {
-  // Lógica de inicio de sesión 
+
   
   console.log('Iniciar sesión con:', username.value, password.value);
 };
 </script>
 
-<!-- <template>
-    <div class="login-container">
-        <p class="text">Nombre</p>
-        <input type="text" v-model="username">
-        <p class="text">Contraseña</p>
-        <input type="password" v-model="password">
-        <button class="btn-login" @click="login">Iniciar sesión</button>
-    </div>
-        
-
-</template> -->
-
 <template>
     <div class="login-container">
         <div class="p-field">
-            <label for="username">Usuario<br></label><br>
-            
+            <label for="username">Usuario<br></label><br>            
             <InputText v-model="username" id="username" name="username" autocomplete="username" />
             <br>
         </div>
@@ -42,7 +29,6 @@ const login = () => {
 </template>
 
 <style scoped lang="scss">
-
 .login-container {
     display: flex;
     flex-direction: column;
@@ -63,7 +49,6 @@ const login = () => {
         background-color: rgba(255, 249, 249, 0.95);
         font-size: 16px;
     }
-
 
     input {
         margin-bottom: 3rem;
@@ -95,7 +80,6 @@ const login = () => {
         }
     }
 }
-
 
 </style>
 

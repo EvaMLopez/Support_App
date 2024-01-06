@@ -21,7 +21,7 @@ body {
     justify-content: space-between; 
     align-items: center;
     padding: 8rem 0;
-    // height: 80vh; 
+    height: 85vh; 
   }
 
   @media (max-width: 767px) {
