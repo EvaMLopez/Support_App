@@ -1,5 +1,5 @@
 <script setup>
-  // Configuración del componente
+
 </script>
 
 <template>
